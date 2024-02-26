@@ -2,7 +2,7 @@
 
 Versión de Prueba Resuelta por Gabriel Peralta Vargas!
 
-Además de lo siempre para iniciar un proyecto Laravel (Aplicar el comando "composer install" para agregar todos los archivos de compose necesarios y faltantes). A grandes rasgos el Código poseía 7 errores:
+Además de lo siempre para iniciar un proyecto Laravel (Ejecutar el comando "composer install" para agregar todos los archivos de compose necesarios y faltantes). A grandes rasgos el Código poseía 7 errores:
 
 1. En web.php, erróneamente estaba escrita una función Post en lugar de una Get.
 
