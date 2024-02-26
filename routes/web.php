@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ PruebaController::class, 'index']);
+Route::get('/', [ PruebaController::class, 'index']); // - Esto debe ser una función get, no una función post.  

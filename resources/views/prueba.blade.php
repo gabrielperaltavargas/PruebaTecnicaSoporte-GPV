@@ -12,7 +12,7 @@
 <body class="invisible">
     <h1>Nombre: {{ $aplicante['nombre'] }}</h1>
      @if ($aplicante['aprobado'])
-        <h2>APROBADO</h2>
+        <h2>APROBADO</h2>  <img src="https://www.videogamesprites.net/ChronoTrigger/Party/Crono/Crono%20-%20Victory.gif">
         @else
             <h2>REPROBADO</h2>
     @endif

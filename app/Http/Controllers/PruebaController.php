@@ -14,16 +14,16 @@ class PruebaController extends Controller
     {
         $aplicante = [
             'puntos' => 0,
-            'nivel' => 1,  // Según las indicaciones de README, el aplicante debe partir de Nivel 1, además hacía falta una coma para terminar la asignación inicial de la variable  
-            'nombre' => 'Gabriel Peralta', // Nombre del aplicante 
+            'nivel' => 1,  // - Según las indicaciones de README, el aplicante debe partir de Nivel 1, además hacía falta una coma para terminar la asignación inicial de la variable  
+            'nombre' => 'Gabriel Peralta', // - Nombre del aplicante 
             'aprobado' => false
         ];
-        while ($aplicante['nivel'] < 10) { // El While debe durar hasta alcanzado el Nivel 10, empezando con 1, por eso la variable debe ser menos a 10 y llegado a 10 es cuando termina la operación. 
+        while ($aplicante['nivel'] < 10) { // - El While debe durar hasta alcanzado el Nivel 10, empezando con 1, por eso la variable debe ser menos a 10 y llegado a 10 es cuando termina la operación. 
             $aplicante = $this->entrenar($aplicante);
         }
         $aplicante['aprobado'] = $this->evaluar($aplicante);
 
-        return view('prueba', compact('aplicante')); // Como aplicante es un Array ---9/97089/3513914-h
+        return view('prueba', ['aplicante' => $aplicante]); // Tras el cambio realizado, ahora la View tiene acceso a los datos de la variable $aplicante, ya que estos ahora son pasados a través de 'aplicante', y así una variable $aplicante como tal existe en la View. 
     }
 
     /**
@@ -31,11 +31,10 @@ class PruebaController extends Controller
      * @param array $aplicante
      * @reutrn array
      */
-    private function entrenar(array $aplicante) //La variable $aplicante definida en la linea 15 no es un Int, es un Array de diferentes tipos de variables. 
+    private function entrenar(array $aplicante) // - La variable $aplicante definida en la linea 15 no es un Int, es un Array de diferentes tipos de variables. 
     {
         $aplicante['puntos'] += 10 / $aplicante['nivel'];
 		
-	
 		
         if ($aplicante['puntos'] >= 100) {
             $aplicante['nivel']++;
