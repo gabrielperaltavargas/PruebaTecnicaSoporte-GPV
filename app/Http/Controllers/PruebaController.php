@@ -35,7 +35,7 @@ class PruebaController extends Controller
     {
         $aplicante['puntos'] += 10 / $aplicante['nivel'];
 		
-		print_r($aplicante['puntos'] += 10 / $aplicante['nivel']);
+	
 		
         if ($aplicante['puntos'] >= 100) {
             $aplicante['nivel']++;
